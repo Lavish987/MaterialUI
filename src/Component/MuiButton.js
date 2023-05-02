@@ -11,12 +11,13 @@ export default function MuiButton() {
       <Button variant="outlined">Hello World</Button>
     </Stack>
     <Stack spacing={2} direction={'row'} >
-    <Button variant="contained" startIcon={<SendIcon/>}>Hello World</Button>
+    <Button variant="contained" startIcon={<SendIcon/>} href="https://google.com">Hello World</Button>
     <IconButton>
-      <SendIcon color='success'/>
+      <SendIcon color='success' onClick={()=>{alert("success")}}/>
     </IconButton>
       <Button variant="text">Hello World</Button>
       <Button variant="outlined">Hello World</Button>
+      <Button aria-label='CLick ME!'>Click ME</Button>
     </Stack>
     </Stack>
   );

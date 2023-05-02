@@ -1,13 +1,21 @@
 import './App.css';
-import MuiButton from './Component/MuiButton';
-import { MuiTypography } from './Component/MuiTypography';
+import { Home } from './Home';
+import {Routes,Route,BrowserRouter,} from "react-router-dom"
+import { Task } from './Component/Task';
+import { Toggler } from './Component/Toggle';
+import { MuiTextfield } from './Component/MuiTextfield';
 
 function App() {
+  
   return (
-   <>
-   <MuiButton/>
-   <MuiTypography/>
-   </>
+    <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<Home/>}/>
+      <Route path='/Task' element={<Task/>}/>
+      <Route path='/Toggle' element={<Toggler/>}/>
+      <Route path='/Textfield' element={<MuiTextfield/>}/>
+    </Routes>
+    </BrowserRouter>
   );
 }
 
